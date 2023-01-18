@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "858702239404",
+    "project_id": "nordestinando-f001c",
+    "storage_bucket": "nordestinando-f001c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858702239404:android:0cd78c819a06ddb6d2b109",
+        "android_client_info": {
+          "package_name": "com.posart.nordestinando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858702239404-396ov7lo4m89h0hufla4ga365vksm1kc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.posart.nordestinando",
+            "certificate_hash": "bb187f789a38fc65a035501cf8d1c0d06db65e52"
+          }
+        },
+        {
+          "client_id": "858702239404-3gsbh694ve6d08eupon278ata83hv63o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0mWr0LPiPal_D5yFxgwjv_iGdFFOM3RU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858702239404-3gsbh694ve6d08eupon278ata83hv63o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
