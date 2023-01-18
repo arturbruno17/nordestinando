@@ -5,6 +5,7 @@ import com.posart.nordestinando.model.Location
 import com.posart.nordestinando.model.Myth
 import com.posart.nordestinando.model.TouristSpot
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 
@@ -32,7 +33,7 @@ class RemoteDataSourceTest {
         val nameMyth = "Boitatá"
         val expectedResult = listOf(Myth(1L, "Boitatá", "Boitatá", "Boitatá", "Maranhão"))
 
-        val result = fakeRemoteDataSource.filterMythByName(nameMyth)
+        val result = fakeRemoteDataSource.filterMythByName(nameMyth).first()
 
         assert(expectedResult == result)
     }
@@ -44,7 +45,7 @@ class RemoteDataSourceTest {
             val nameMyth = "Curupira"
             val expectedResult = emptyList<Myth>()
 
-            val result = fakeRemoteDataSource.filterMythByName(nameMyth)
+            val result = fakeRemoteDataSource.filterMythByName(nameMyth).first()
 
             assert(expectedResult == result)
         }
@@ -55,7 +56,7 @@ class RemoteDataSourceTest {
         val stateMyth = "Ceará"
         val expectedResult = listOf(Myth(2L, "Caipora", "Caipora", "Caipora", "Ceará"))
 
-        val result = fakeRemoteDataSource.filterMythByState(stateMyth)
+        val result = fakeRemoteDataSource.filterMythByState(stateMyth).first()
 
         assert(expectedResult == result)
     }
@@ -67,7 +68,7 @@ class RemoteDataSourceTest {
             val stateMyth = "Alagoas"
             val expectedResult = emptyList<Myth>()
 
-            val result = fakeRemoteDataSource.filterMythByState(stateMyth)
+            val result = fakeRemoteDataSource.filterMythByState(stateMyth).first()
 
             assert(expectedResult == result)
         }
@@ -89,7 +90,7 @@ class RemoteDataSourceTest {
             )
         )
 
-        val result = fakeRemoteDataSource.filterArtByAuthor(authorName)
+        val result = fakeRemoteDataSource.filterArtByAuthor(authorName).first()
 
         assert(expectedResult == result)
     }
@@ -101,7 +102,7 @@ class RemoteDataSourceTest {
             val authorName = "Picasso"
             val expectedResult = emptyList<Myth>()
 
-            val result = fakeRemoteDataSource.filterArtByAuthor(authorName)
+            val result = fakeRemoteDataSource.filterArtByAuthor(authorName).first()
 
             assert(expectedResult == result)
         }
@@ -129,7 +130,7 @@ class RemoteDataSourceTest {
             )
         )
 
-        val result = fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot)
+        val result = fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot).first()
 
         assert(expectedResult == result)
     }
@@ -152,7 +153,7 @@ class RemoteDataSourceTest {
             )
 
             val result =
-                fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot, cityTouristSpot)
+                fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot, cityTouristSpot).first()
 
             assert(expectedResult == result)
         }
@@ -165,7 +166,7 @@ class RemoteDataSourceTest {
             val expectedResult = emptyList<TouristSpot>()
 
 
-            val result = fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot)
+            val result = fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot).first()
 
             assert(expectedResult == result)
         }
@@ -180,7 +181,7 @@ class RemoteDataSourceTest {
             val expectedResult = emptyList<TouristSpot>()
 
             val result =
-                fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot, cityTouristSpot)
+                fakeRemoteDataSource.filterTouristSpotByLocation(stateTouristSpot, cityTouristSpot).first()
 
             assert(expectedResult == result)
         }

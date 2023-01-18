@@ -1,24 +1,25 @@
 package com.posart.nordestinando.data
 
 import com.posart.nordestinando.model.*
+import kotlinx.coroutines.flow.Flow
 
 interface DataSource {
-    suspend fun getAllMyths(): List<Myth>
-    suspend fun filterMythByName(name: String): List<Myth>
-    suspend fun filterMythByState(state: String): List<Myth>
+    fun getAllMyths(): Flow<List<Myth>>
+    fun filterMythByName(name: String): Flow<List<Myth>>
+    fun filterMythByState(state: String): Flow<List<Myth>>
 
-    suspend fun getAllArts(): List<Art>
-    suspend fun filterArtByName(name: String): List<Art>
-    suspend fun filterArtByAuthor(authorName: String): List<Art>
+    fun getAllArts(): Flow<List<Art>>
+    fun filterArtByName(name: String): Flow<List<Art>>
+    fun filterArtByAuthor(authorName: String): Flow<List<Art>>
 
-    suspend fun getAllTypicalFoods(): List<Food>
-    suspend fun filterTypicalFoodByName(name: String): List<Food>
-    suspend fun filterTypicalFoodByState(state: String): List<Food>
+    fun getAllTypicalFoods(): Flow<List<Food>>
+    fun filterTypicalFoodByName(name: String): Flow<List<Food>>
+    fun filterTypicalFoodByState(state: String): Flow<List<Food>>
 
-    suspend fun getAllTouristSpots(): List<TouristSpot>
-    suspend fun filterTouristSpotByName(name: String): List<TouristSpot>
-    suspend fun filterTouristSpotByLocation(state: String, city: String? = null): List<TouristSpot>
-    suspend fun getAllExpressions(): List<Dialect>
-    suspend fun filterExpressionByName(name: String): List<Dialect>
-    suspend fun filterExpressionByState(state: String): List<Dialect>
+    fun getAllTouristSpots(): Flow<List<TouristSpot>>
+    fun filterTouristSpotByName(name: String): Flow<List<TouristSpot>>
+    fun filterTouristSpotByLocation(state: String, city: String? = null): Flow<List<TouristSpot>>
+    fun getAllExpressions(): Flow<List<Dialect>>
+    fun filterExpressionByName(name: String): Flow<List<Dialect>>
+    fun filterExpressionByState(state: String): Flow<List<Dialect>>
 }
