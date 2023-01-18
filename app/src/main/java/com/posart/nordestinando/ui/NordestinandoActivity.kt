@@ -1,4 +1,4 @@
-package com.posart.nordestinando
+package com.posart.nordestinando.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
